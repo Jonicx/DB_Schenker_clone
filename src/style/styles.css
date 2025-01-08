@@ -1,0 +1,54 @@
+/* styles.css */
+
+/* Globally apply box-sizing for consistent padding and border handling */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Hide the default scrollbar for Chrome, Safari, and Opera */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none;      /* Firefox */
+  overflow-x: auto;         /* For Chrome and Safari */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, Opera */
+}
+
+
+/* Article card styles (adjust max-width as needed) */
+.article-card {
+  flex: 0 0 auto; /* Prevent shrinking or growing */
+  max-width: 300px; /* Adjust based on your design */
+}
+
+/* Prevent horizontal overflow */
+.flex {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem; /* Adjust gap size as needed */
+}
+
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 100%;
+}
+
+/* Progress bar styles */
+.progress-bar-container {
+  width: 20%;
+  height: 4px;
+  background-color: #e5e5e5;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #005f6a;
+  transition: width 0.3s ease;
+}
