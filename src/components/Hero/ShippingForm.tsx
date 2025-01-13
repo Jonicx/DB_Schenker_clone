@@ -8,7 +8,7 @@ export function ShippingForm() {
   const [toCity, setToCity] = useState('');
 
   return (
-    <div className="bg-white p-8 h-auto md:h-[30rem] rounded-md shadow-lg md:col-span-1 flex flex-col mt-auto">
+    <div className="bg-white p-8 h-auto lg:h-[30rem] rounded-md shadow-lg md:col-span-1 flex flex-col mt-auto">
       <div className="flex space-x-6 mb-6 gap-4">
         <button
           className={`pb-2 ${shipmentType === 'land' ? ' border-black text-black border-b-[3px]' : ''} font-extrabold text-xl`}
@@ -35,8 +35,8 @@ export function ShippingForm() {
 
       <div className="space-y-1">
         <div>
-          <label className="block text-xl font-bold mb-4">From</label>
-          <div className="flex flex-col sm:flex-row sm:space-x-4">
+          <label className="block text-xl font-bold mb:0 lg:mb-4">From</label>
+          <div className="flex flex-col sm:flex-row sm:space-x-4 sm:gap-y-0">
             <div className="p-4 sm:mb-0 flex-grow w-full sm:w-auto">
               <select 
               className="w-full p-3 rounded-md bg-white font-light placeholder:text-gray-400 shadow-custom-dark hover:shadow-custom-medium"
@@ -68,9 +68,9 @@ export function ShippingForm() {
         </div>
 
         <div>
-         <label className="block text-xl font-bold mb-4">To</label>
-          <div className="flex flex-col sm:flex-row sm:space-x-4">
-            <div className="sm:mb-0 p-4 flex-grow w-full sm:w-auto">
+         <label className="block text-xl font-bold mb:0 lg:mb-4">To</label>
+          <div className="flex flex-col sm:flex-row sm:space-x-4 sm:gap-y-0">
+            <div className="mb-0 p-4 flex-grow w-full sm:w-auto ">
               <select
                 className="w-full p-3 rounded-md bg-white font-light placeholder:text-gray-400"
                 value={toLocation}

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { articles } from "../data/Articles";
+import { articles } from "../../data/Articles";
 import ArticleCard from "./ArticleCard";
-import "../style/styles.css"; // Ensure global CSS for scrollbar-hide
+import "../../style/styles.css"; // Ensure global CSS for scrollbar-hide
 
 export default function ArticleCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null);

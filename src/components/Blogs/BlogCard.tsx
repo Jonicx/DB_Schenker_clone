@@ -1,5 +1,5 @@
 import React from "react";
-import type { Blogs } from "../data/blogs";
+import type { Blogs } from "../../data/blogs";
 
 interface BlogCardProps {
     blog: Blogs[]; // Expect an array of blogs
@@ -11,7 +11,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
             {blog.map((blog) => (
                 <div
                     key={blog.id}
-                    className={`flex flex-col sm:flex-row items-center gap-28 ${
+                    className={`flex flex-col sm:flex-row items-center lg:gap-28 ${
                         blog.id === 2 ? "sm:flex-row-reverse" : ""
                     }`}
                 >

@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { TagFilter } from './TagFilter';
 import { TagArticleCard } from './TagArticles';
-import { Carousel } from '../tools/Carousel';
-import { TagsArticles } from '../data/TagsArticles';
+import { Carousel } from '../../tools/Carousel';
+import { TagsArticles } from '../../data/TagsArticles';
 
 const allTags = Array.from(
   new Set(TagsArticles.flatMap(article => article.tags))

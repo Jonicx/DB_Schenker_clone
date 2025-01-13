@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { jobs } from "../data/Jobs";
+import { jobs } from "../../data/Jobs";
 import { ArrowRight } from "lucide-react";
 
 export default function JobCard() {

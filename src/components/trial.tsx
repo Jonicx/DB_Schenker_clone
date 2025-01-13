@@ -310,3 +310,188 @@ const ShippingForm = () => {
 </div>
 </div>
 
+export default function ServiceCard({ service }: ServiceCardProps) {
+  return (
+    //ServiceCard
+    <div className="min-w-[330px] flex-shrink-0 snap-start p-2">
+      <div className=" rounded overflow-hidden transform transition-all duration-300 ">
+        <div className={`relative h-96 ${service.bgColor} hover:scale-105 `} style={{height: '30rem'}}>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+        </div>
+        <div className="p-1 mt-5 min-h-[100px] flex flex-col justify-between">
+          <h3 className="bottom-4 left-4 text-3xl text-black">{service.title}</h3>
+          <a
+            href={service.link}
+            className="items-center gap-2 text-[#005F6A] hover:text-teal-800 font-extrabold transition-colors duration-200"
+          >
+            Start here
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+//Updated ServiceCard with images.
+export default function ServiceCard({ service }: ServiceCardProps) {
+  return (
+    <div className="min-w-[300px] sm:min-w-[330px] flex-shrink-0 snap-start p-4">
+      <div className="rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+        <div
+          className={`relative ${service.bgColor} aspect-w-3 aspect-h-4`}
+          style={{ backgroundImage: `url(${service.bgImage || ''})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        >
+          <div
+            className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+            aria-hidden="true"
+          />
+        </div>
+        <div className="p-4 mt-5 flex flex-col justify-between">
+          <h3 className="text-xl sm:text-2xl font-bold text-black">{service.title}</h3>
+          <a
+            href={service.link}
+            className="mt-4 text-[#005F6A] hover:text-teal-800 font-extrabold transition-colors duration-200"
+            aria-label={`Learn more about ${service.title}`}
+          >
+            Start here
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function BlogCard({ blog }: BlogCardProps) {
+  return (
+      <div className="space-y-20">
+          {blog.map((blog) => (
+              <div
+                  key={blog.id}
+                  className={`flex flex-col sm:flex-row items-center gap-28 ${
+                      blog.id === 2 ? "sm:flex-row-reverse" : ""
+                  }`}
+              >
+                  {/* Image Replacement: Colored Background */}
+                  <div
+                      className={`relative flex-shrink-0 sm:w-1/2 h-64 rounded ${blog.bgColor}`}
+                      style={{ height: '26rem'}}
+                  >
+                      <button
+                          className="absolute bottom-4 rounded-full font-extrabold left-4 bg-white text-black text-xs px-4 py-2 shadow hover:bg-gray-200"
+                       >
+                          {blog.button}
+                      </button>
+                  </div>
+
+                  {/* Description */}
+                  <div className="sm:w-1/2 p-7">
+                      <p className="text-sm font-light text-slate-500 mb-7">{blog.subheading}</p>
+                      <h2 className="text-3xl font-normal mb-7">{blog.title}</h2>
+                      <p className="text-xl font-light mb-10">{blog.description}</p>
+                      <a
+                          className="items-center text-[#005F6A] hover:text-teal-800 font-extrabold transition-colors duration-200"
+                      >
+                          {blog.link}
+                      </a>
+                  </div>
+              </div>
+          ))}
+      </div>
+  );
+}
+
+const TrackingForm = () => {
+  const [trackingId, setTrackingId] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [shipmentFound, setShipmentFound] = useState<boolean | null>(null);
+
+  const handleSearch = () => {
+    if (trackingId === 'CIN220131001') {
+      setShipmentFound(false);
+    } else {
+      setShipmentFound(true);
+    }
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setTrackingId('');
+    setShipmentFound(null);
+  };
+
+  return (
+    <div>
+      {/* Tracking Form (Your original form) */}
+      <div className="bg-white p-8 rounded-md shadow-lg flex flex-col">
+        {/* ... (rest of your form code) */}
+        <button
+          className="bg-[#005F6A] text-white px-5 py-3 rounded-full shadow-md hover:bg-[#005F6A]"
+          style={{ fontWeight: 'bold' }}
+          onClick={handleSearch}
+        >
+          Track
+        </button>
+      </div>
+
+      {/* Full-Page Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50 overflow-y-auto">
+          <div className="bg-white w-full h-full md:w-2/3 md:h-auto md:max-h-[90vh] rounded-md p-8 md:p-10 relative"> {/* Adjusted width and height */}
+            {/* Modal Header */}
+            <div className="flex justify-between items-center mb-6 md:mb-8"> {/* Increased margin bottom */}
+              <div className="flex items-center">
+                <img src="https://www.dbschenker.com/resource/blob/105304/6c8574169542566718d7285a76986566/logo-data.svg" alt="DB Schenker Logo" className="h-8 mr-4" />
+                <span className="text-xl font-bold">Schenker Tracking</span>
+              </div>
+              <button onClick={closeModal} className="text-gray-600 hover:text-gray-900 text-3xl font-bold absolute top-2 right-4 md:top-4 md:right-6"> {/* Improved close button */}
+                &times;
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="md:px-4"> {/* Added horizontal padding on larger screens */}
+              {shipmentFound === false && (
+                <div className="p-4 border border-red-500 rounded-md bg-red-50 mb-6 md:mb-8">
+                  <p className="text-red-700">Shipment not found for: {trackingId}!</p>
+                </div>
+              )}
+              {shipmentFound === true && (
+                <div className="p-4 border border-green-500 rounded-md bg-green-50 mb-6 md:mb-8">
+                  <p className="text-green-700">Shipment found for: {trackingId}!</p>
+                  <div className='mt-5 flex flex-col md:text-lg'> {/* Increased font size on larger screens */}
+                    <p>Origin: Nicosia, Cyprus</p>
+                    <p>Destination: Germany</p>
+                    <p>Status: In transit</p>
+                    <p>Expected Delivery Date: 2024-03-15</p>
+                    <p>Current Location: Somewhere in Italy</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Reference Number Display */}
+              <div className="mb-6 md:mb-8">
+                <label htmlFor="trackingId" className="block text-gray-700 font-bold mb-2 md:text-lg">
+                  Reference Number:
+                </label>
+                <input
+                  type="text"
+                  id="trackingId"
+                  className="w-full border border-gray-300 rounded-md p-3 md:p-4 focus:outline-none focus:ring focus:ring-blue-300 bg-gray-100 md:text-lg"
+                  value={trackingId}
+                  disabled
+                />
+              </div>
+            </div>
+
+            {/* Footer (Optional) */}
+            <div className="border-t pt-4 mt-6 md:mt-8 text-gray-600 text-sm md:text-base">
+              {/* Add footer information here */}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
