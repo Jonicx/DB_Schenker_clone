@@ -19,4 +19,4 @@ export default function BlogCarousel() {
             </div>
         </div>
     ) 
-}  // End of BlogCarousel component
+}  // End of BlogCarousel component 

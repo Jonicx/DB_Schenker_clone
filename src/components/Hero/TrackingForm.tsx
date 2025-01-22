@@ -1,24 +1,35 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AlertCircle } from 'lucide-react';
+import { shipments } from '../../data/shipments';
+
 
 const TrackingForm = () => {
-  const [trackingId, setTrackingId] = useState('');
   const [error, setError] = useState('');
+  const [referenceNumber, setReferenceNumber] = useState('');
+  
   const navigate = useNavigate();
 
-  const handleSearch = () => {
-    if (!trackingId.trim()) {
-      setError('Please enter a tracking number');
-      return;
-    }
-    setError('');
-    navigate(`/tracking/${trackingId}`);
+  const handleSubmit = (e: FormEvent) => {
+      e.preventDefault();
+      setError('');
+      
+      if (!referenceNumber.trim()) {
+          setError('Please enter a reference number');
+          return;
+      }
+
+      // Check if the shipment exists
+      if (shipments[referenceNumber]) {
+          navigate(`/tracking/Results/${referenceNumber}`);
+      } else {
+          setError('No shipment found with this reference number');
+      }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
-      handleSearch();
+      handleSubmit();
     }
   };
   
@@ -32,9 +43,9 @@ const TrackingForm = () => {
           className={`w-full p-3 rounded-md font-light placeholder:text-gray-400 ${
             error ? 'border-red-500 focus:border-red-500' : ''
           }`}
-          value={trackingId}
+          value={referenceNumber}
           onChange={(e) => {
-            setTrackingId(e.target.value);
+            setReferenceNumber(e.target.value);
             if (error) setError('');
           }}
           onKeyPress={handleKeyPress}
@@ -53,7 +64,7 @@ const TrackingForm = () => {
         <button 
           className="bg-[#005F6A] text-white px-5 py-3 mb-2 rounded-full shadow-md hover:bg-[#004956] transition-colors" 
           style={{fontWeight:'bold'}} 
-          onClick={handleSearch}
+          onClick={handleSubmit}
         >
           Track
         </button>

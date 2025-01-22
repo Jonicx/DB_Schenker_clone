@@ -7,6 +7,9 @@ export default function ArticleCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
+  // Filter to include only the first three articles
+  const filteredArticles = articles.filter(article => ["1", "2", "3"].includes(article.id));
+
   const handleScroll = () => {
     if (scrollRef.current) {
       const element = scrollRef.current;
@@ -34,13 +37,13 @@ export default function ArticleCarousel() {
       </div>
       <div
         ref={scrollRef}
-        className="flex overflow-x-auto gap-6 snap-x snap-mandatory pb-6 scrollbar-hide"
+        className="flex overflow-x-auto gap-1 snap-x snap-mandatory pb-6 scrollbar-hide"
         style={{
           maxWidth: "100%", // Constrain width to prevent overflow
         }}
       >
-        {articles.map((article, index) => (
-          <ArticleCard key={index} article={article} />
+        {filteredArticles.map(article => (
+          <ArticleCard key={article.id} article={article} />
         ))}
       </div>
       <div className="mt-4 flex justify-center items-center h-1">

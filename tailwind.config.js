@@ -8,8 +8,10 @@ export default {
         'custom-medium': '0 4px 10px rgba(0, 0, 0, 0.15)',
         'custom-dark': '0 6px 15px rgba(0, 0, 0, 0.2)',
       },
-      
     },
+    screens: {
+      xs: '639px',
+    }
   },
   plugins: [],
 };

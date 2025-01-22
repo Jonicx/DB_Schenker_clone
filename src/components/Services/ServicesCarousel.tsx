@@ -42,8 +42,8 @@ export default function ServicesCarousel() {
         <h1 className="text-[clamp(1rem,5vw,3rem)] mb-3">Your new favorite track</h1>
       </div>
 
-      <div className="relative ml-48  ">
-        <div className="absolute -left-44 top-[80%] -translate-y-1/2">
+      <div className="relative lg:ml-48 ml-12 ">
+        <div className="absolute lg:-left-44 -left-16 top-[80%] z-10 -translate-y-1/2">
           <button
             onClick={scrollRight}
             className="transform hover:scale-110 transition-transform duration-300"

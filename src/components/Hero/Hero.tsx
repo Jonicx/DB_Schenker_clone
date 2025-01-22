@@ -2,24 +2,34 @@ import React from "react";
 import LoginSection from "./LoginSection";
 import {ShippingForm} from "./ShippingForm";
 import TrackingForm from "./TrackingForm";
+import videos from "../../Assets/db_schenker_hero.webm"
 
 export default function HeroSection() {
     return (
-      <div className="relative h-[630px]">
+      <div className="relative h-[80vh] xs:h-[95vh] sm:h-[95vh] md:h-[90vh] lg:h-[95vh] xl:h-[95vh]">
         {/* Hero Background */}
-        <img
-          src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
-          alt="A logistics-themed background with cargo containers"
-          className="w-full h-full object-cover"
-        />
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50">
-
+        <div className="absolute inset-0 w-full h-full">
+          <video
+            className="w-full  h-full object-cover lg:object-cover xl:object-none"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src={videos} type="video/webm" />
+            <source src={videos} type="video/mp4" />
+            <img
+              src={videos}
+              alt="Fallback background"
+              className="w-full h-full object-cover"
+            />
+            {/* Optional Fallback */}
+            <p>Your browser does not support WebM videos. Please update your browser.</p>
+          </video>
         </div>
 
         {/* Forms Section */}
-        <div className="absolute inset-x-0 top-[110%] transform translate-y-[-27%] z-10 lg:-translate-y-[48%] px-0">
+        <div className="absolute inset-x-0 top-[115%] xs:top-[120%] xl:top-[95%] lg:top-[105%] md:top-[105%] sm:top-[110%] transform translate-y-[-27%] z-10 lg:-translate-y-[48%] px-0">
           <div className="px-10">
             <h1 className="text-white font-normal text-[clamp(1rem,5vw,3rem)]">
               Accelerating Logistics

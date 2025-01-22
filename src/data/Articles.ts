@@ -1,3 +1,7 @@
+import DbSchenkerPowering from "../Assets/header-cl-uk-promotion.webp"
+import dbSchenkerEmployess from "../Assets/header-image-gpt.webp"
+import dbSchenkerSemiConductor from "../Assets/e-mobility-image.webp"
+
 export interface Articles {
     title: string;
     image: string;
@@ -6,12 +10,12 @@ export interface Articles {
     bgColor: string;
     id: string;
   }
-  
+   
   export const articles: Articles[] = [
     {
       id: '1',
       title: 'Powering the Future or e-Mobility',
-      image: '',
+      image: DbSchenkerPowering,
       buttons: [
         { text: 'Blog', url: '#' },
         { text: 'Contract Logistics', url: '#' },
@@ -22,7 +26,7 @@ export interface Articles {
     {
       id: '2',
       title: 'Interested in how DB SCHENKER employees get fit for the world of AI?',
-      image: '',
+      image: dbSchenkerEmployess,
       buttons: [
         { text: 'Blog', url: '#' },
         { text: 'Artificial Intelligence', url: '#' },
@@ -33,7 +37,7 @@ export interface Articles {
     {
       id: '3',
       title: 'DB Schenker to launch new warehouse for semiconductors in the Netherlands',
-      image: '',
+      image: dbSchenkerSemiConductor,
       buttons: [
         { text: 'PR', url: '#' },
         { text: 'News', url: '#' },

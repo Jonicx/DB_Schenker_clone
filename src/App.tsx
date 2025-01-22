@@ -11,6 +11,7 @@ import { Footer } from './components/Footer/Footer';
 import HeroSection from './components/Hero/Hero';
 import TrackingResult from './components/Tracking/TrackingResults';
 import TrackingSearch from './components/Tracking/TrackingSearch';
+import TrackingShipmentResults from './components/Tracking/TrackingShipmentResults';
 
 function App() {
   const location = useLocation();
@@ -27,7 +28,7 @@ function App() {
                 <HeroSection />
               </div>
               {/* Additional Content - Added margin top to account for overlapping forms */}
-              <div className="mx-auto pb-16" style={{ margin: '4rem', marginRight: '0px', marginLeft: '1rem', paddingTop: '14rem' }}>
+              <div className="mx-auto pb-16 mt-20 sm:pt-[35%] pt-[105%] lg:pt-[22%] md:pt-[40%] xl:pt-[9rem]" style={{ marginRight: '0px', marginLeft: '1rem' }}>
                 <ServicesCarousel />
               </div>
               <div className="mx-auto pb-16" style={{ margin: '0rem', marginRight: '0rem', marginLeft: '0rem', maxWidth: '100%' }}>
@@ -46,12 +47,12 @@ function App() {
           } />
           <Route path="/tracking/:trackingId" element={<TrackingResult />} />
           <Route path="/tracking/search" element={<TrackingSearch/>}/>
-          {/* Add more routes as needed */}
+          <Route path="/tracking/Results/:shipmentId" element={<TrackingShipmentResults/>}/>
         </Routes>
       </main>
       {!isTrackingPage && <Footer />}
     </div>
   );
-}
+} 
 
 export default App;
