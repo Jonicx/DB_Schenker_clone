@@ -4,20 +4,20 @@ import { FooterColumn } from './FooterColumn';
 import { SocialLinks } from './SocialLinks';
 import { LegalLinks } from './LegalLinks';
 import { serviceLinks, businessLinks, companyLinks } from './config/navigationLinks';
+import dbSchenkerLogoFooter from "../../Assets/DB-Schenker-logo-footer.svg";
+
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#005f6a]" style={{ paddingTop: '6rem', paddingBottom: '5px' }}>
-      <div className="container mx-auto">
+    <footer className="bg-[#005f6a] pt-24 pb-2">
+      <div className="container mx-auto p-4">
         <div className="mb-12">
-          {/* <img  
-            src="/schenker-logo.png" 
+          <img   
+            src={dbSchenkerLogoFooter}
             alt="SCHENKER" 
-            className="h-8"
-          /> */}
-          <div className="flex items-center space-x-12">
-            <h1 className="text-2xl text-white font-bold">SCHENKER</h1>
-          </div>
+            className="h-7"
+          />
+
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
