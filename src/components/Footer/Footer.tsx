@@ -5,19 +5,23 @@ import { SocialLinks } from './SocialLinks';
 import { LegalLinks } from './LegalLinks';
 import { serviceLinks, businessLinks, companyLinks } from './config/navigationLinks';
 import dbSchenkerLogoFooter from "../../Assets/DB-Schenker-logo-footer.svg";
+import { useNavigate } from 'react-router-dom';
+
 
 
 export const Footer: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="bg-[#005f6a] pt-24 pb-2">
       <div className="container mx-auto p-4">
         <div className="mb-12">
           <img   
             src={dbSchenkerLogoFooter}
-            alt="SCHENKER" 
-            className="h-7"
+            alt="SCHENKER"
+            className="h-7 cursor-pointer"
+            onClick={() => navigate('/')} // Navigate to the homepage on click
           />
-
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">

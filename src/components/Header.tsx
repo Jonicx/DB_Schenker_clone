@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Globe, User, Menu, X } from 'lucide-react';
 import dbSchenkerLogo from "../Assets/DB-Schenker-logo.svg";
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const navigate = useNavigate();
 
   // Handle navbar visibility on scroll
   useEffect(() => {
@@ -53,7 +55,8 @@ const Header = () => {
             <img
               src={dbSchenkerLogo}
               alt="DB Schenker Logo"
-              className="w-32 lg:w-48 md:w-48 sm:w-40  h-auto"
+              className="w-32 lg:w-48 md:w-48 sm:w-40  h-auto course-pointer"
+              onClick={() => navigate('/')} // Navigate to the homepage on click
             />
           </div>
 
