@@ -3,8 +3,8 @@ import type { Blogs } from "../../data/blogs";
 
 interface BlogCardProps {
     blog: Blogs[]; // Expect an array of blogs
-}
-
+} 
+ 
 export default function BlogCard({ blog }: BlogCardProps) {
     return (
         <div className="space-y-20">

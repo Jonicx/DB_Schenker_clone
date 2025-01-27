@@ -65,21 +65,21 @@ const Header = () => {
             {/* Navigation Links (visible on large screens) */}
             <nav className="hidden xl:flex">
               <ul className="flex -space-x-2">
-                <li>
-                  <a href="#" className="font-extrabold" style={{ fontSize: '1.3rem' }}>
-                    Business
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="font-extrabold" style={{ fontSize: '1.3rem' }}>
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="font-extrabold" style={{ fontSize: '1.3rem' }}>
-                    Insights
-                  </a>
-                </li>
+              <li>
+                <a onClick={() => navigate('/business')} className="relative font-[900] text-[1.3rem] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
+                  Business
+                </a>
+              </li>
+              <li>
+                <a href="#" className="relative font-[900] text-[1.3rem] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a href="#" className="relative font-[900] text-[1.3rem] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
+                  Insights
+                </a>
+              </li>
               </ul>
             </nav>
 
@@ -91,6 +91,9 @@ const Header = () => {
               </button>
 
               {/* Login Button */}
+              <div>
+                
+              </div>
               <button
                 className="bg-[#005F6A] text-white px-4 py-3 rounded-full hover:bg-[#004D55] flex items-center -space-x-4"
                 style={{
@@ -162,11 +165,9 @@ const Header = () => {
             </button>
 
             {/* Login Button */}
+            
             <button
               className="bg-[#005F6A] hidden text-white px-4 py-3 rounded-full hover:bg-[#004D55] xl:flex items-center space-x-1"
-              style={{
-                boxShadow: '3px 4px 10px rgba(0, 0, 0, 0.2)',
-              }}
             >
               <User className="w-6 h-5" strokeWidth="1.3" />
               <span className="font-bold xl:flex hidden">Login</span>
