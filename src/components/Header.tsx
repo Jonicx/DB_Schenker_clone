@@ -132,7 +132,7 @@ const Header = () => {
               <nav className="flex flex-col justify-between h-[98%]" style={{ padding: '5rem 5rem 0rem 5rem' }}>
                 <ul className="flex flex-col space-y-4 p-4">
                   <li>
-                    <a onClick={() => navigate('/')} className="font-extrabold text-lg">
+                    <a onClick={() => navigate('/business')} className="font-extrabold text-lg">
                       Business
                     </a>
                   </li>
