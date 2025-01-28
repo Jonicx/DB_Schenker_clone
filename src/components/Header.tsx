@@ -71,7 +71,7 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="relative font-[900] text-[1.3rem] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[3px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
+                <a onClick={() => navigate('/careers')} className="relative font-[900] text-[1.3rem] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[3px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
                   Careers
                 </a>
               </li>
@@ -137,7 +137,7 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="font-extrabold text-lg">
+                    <a onClick={() => navigate('/careers')} className="font-extrabold text-lg">
                       Careers
                     </a>
                   </li>

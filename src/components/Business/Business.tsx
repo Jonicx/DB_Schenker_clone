@@ -5,7 +5,7 @@ import { business } from "./config/business.tsx";
 import dbSchenkerVideo from '../../Assets/db-schenker-video-business.mp4';
 
 export default function Business() {
-    return (
+    return ( 
         <div className="flex flex-col max-w-screen-6xl">
             {/* Video Section */}
             <div className="relative w-full h-[70vh] overflow-hidden">
