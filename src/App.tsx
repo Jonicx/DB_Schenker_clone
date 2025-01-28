@@ -52,7 +52,6 @@ function App() {
           <Route path="/tracking/Results/:shipmentId" element={<TrackingShipmentResults/>}/>
           <Route path="/business" element={<Business/>} />
           <Route path="/Careers" element={<Career/>} />
-
         </Routes>
       </main>
       {!isTrackingPage && <Footer />}
