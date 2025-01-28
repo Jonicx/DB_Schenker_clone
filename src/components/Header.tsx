@@ -51,7 +51,7 @@ const Header = () => {
       >
         <div className="flex items-center justify-between py-4" style={{ height: '7.5rem' }}>
           {/* Logo Section */}
-          <div className="flex items-center space-x-12">
+          <div className="flex items-center space-x-12 course-pointer">
             <img
               src={dbSchenkerLogo}
               alt="DB Schenker Logo"
@@ -63,20 +63,20 @@ const Header = () => {
           {/* Navigation Links and Buttons */}
           <div className="flex-grow flex items-center justify-end -space-x-2">
             {/* Navigation Links (visible on large screens) */}
-            <nav className="hidden xl:flex">
+            <nav className="hidden xl:flex cursor-pointer">
               <ul className="flex -space-x-2">
               <li>
-                <a onClick={() => navigate('/business')} className="relative font-[900] text-[1.3rem] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
+                <a onClick={() => navigate('/business')} className="relative font-[900] text-[1.3rem] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[3px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
                   Business
                 </a>
               </li>
               <li>
-                <a href="#" className="relative font-[900] text-[1.3rem] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
+                <a href="#" className="relative font-[900] text-[1.3rem] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[3px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
                   Careers
                 </a>
               </li>
               <li>
-                <a href="#" className="relative font-[900] text-[1.3rem] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
+                <a href="#" className="relative font-[900] text-[1.3rem] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[3px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
                   Insights
                 </a>
               </li>
@@ -129,8 +129,8 @@ const Header = () => {
               >
                 <X className="w-6 h-6" />
               </button>
-              <nav className="flex flex-col justify-between h-[98%]" style={{ padding: '5rem 5rem 0rem 5rem' }}>
-                <ul className="flex flex-col space-y-4 p-4">
+              <nav className="flex flex-col justify-between h-[98%] cursor-pointer" style={{ padding: '5rem 5rem 0rem 5rem' }}>
+                <ul className="flex flex-col space-y-4 p-4 ">
                   <li>
                     <a onClick={() => navigate('/business')} className="font-extrabold text-lg">
                       Business

@@ -126,7 +126,7 @@ export default function Business() {
                 </div>
             </div>
 
-            <div className="flex overflow-x-auto gap-4 snap-x snap-mandatory pb-6 mt-12">
+            <div className="flex overflow-x-auto gap-4 snap-x snap-mandatory pb-20 mt-12">
                 <div className="container mx-auto p-4">
                     {/* Card Container */}
                     <div className="space-y-20 flex-shrink-0">
