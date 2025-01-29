@@ -107,7 +107,7 @@ export default function Insights() {
             <div className="flex flex-col items-center w-full pb-16">
                 {/* Content on Gray Background */}
                 <div className="w-full bg-gray-100 py-10">
-                    <div className="flex overflow-x-auto gap-8 max-w-8xl p-10 mx-auto scrollbar-hide"
+                    <div className="flex overflow-x-auto justify-center gap-12 max-w-8xl py-10 px-2 mx-auto scrollbar-hide"
                         style={{ scrollSnapType: "x mandatory" }}
                     >
                         {insightsData.map((item, index) => (
