@@ -491,7 +491,27 @@ const TrackingForm = () => {
           </div>
         </div>
       )}
+
+      <div className="relative w-full h-[80vh] flex items-center justify-end">
+          {/* Background Image */}
+          <img
+              src={newsLetter} 
+              alt="Background"
+              className="absolute inset-0 w-full h-full object-cover"
+          />
+
+          {/* Form Container */}
+          <div className="relative z-10 mx-10 ml-auto bg-white backdrop-blur-md rounded-sm p-8 shadow-lg w-full max-w-2xl h-[500px] flex flex-col justify-center">
+              <h2 className="text-3xl font-semibold text-gray-800 mb-6">Never Miss Any News</h2>
+              <p className="text-lg text-gray-600 mb-8">
+                  Join our mailing list and receive the latest updates on logistics and transport.
+              </p>
+          </div>
+      </div>
     </div>
+
+
   );
+  
 };
 

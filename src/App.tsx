@@ -14,6 +14,7 @@ import TrackingSearch from './components/Tracking/TrackingSearch';
 import TrackingShipmentResults from './components/Tracking/TrackingShipmentResults';
 import Business from './components/Business/Business';
 import Career from './components/Careers/Careers';
+import Insights from './components/Insights/insights';
 
 function App() {
   const location = useLocation();
@@ -52,6 +53,7 @@ function App() {
           <Route path="/tracking/Results/:shipmentId" element={<TrackingShipmentResults/>}/>
           <Route path="/business" element={<Business/>} />
           <Route path="/Careers" element={<Career/>} />
+          <Route path="/Insights" element={<Insights/>} />
         </Routes>
       </main>
       {!isTrackingPage && <Footer />}

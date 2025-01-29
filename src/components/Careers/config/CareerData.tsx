@@ -200,7 +200,7 @@ export const benefitData : CareerBenefitData[] = [
   },
 ];
 
-export interface CareerIndexData {
+export interface CareerIndexData { 
     id: number;
     title: string;
     description: string;
