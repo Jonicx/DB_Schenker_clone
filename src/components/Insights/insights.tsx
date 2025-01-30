@@ -3,7 +3,7 @@ import background from "../../Assets/DbSchenker-header-cl-uk.webp";
 import LogisticsMatter from "../../Assets/DbSchenker-blog-logo.webp";
 import ArticleCarousel from "../Articles/ArticleCarousel";
 import MediaCenter from "../../Assets/db-schenker-insights-db-mediathek.webp"
-import { insightsData } from "./config/insightsData";
+import { insightsData, insightsIndexData } from "./config/insightsData";
 import TagCarousel from "../Tags/TagCarousel";
 
 export default function Insights() {
@@ -157,7 +157,58 @@ export default function Insights() {
             </div>
             {/* end of section */}
 
+            <div className="flex flex-col items-center justify-center pt-10 pb-16 space-y-10">
+                    <h1 className="max-w-2xl text-4xl text-center lg:text-6xl font-normal block">
+                        <p className="text-center lg:text-6xl font-normal text-4xl block">
+                            "We believe this challenge can’t be solved alone but needs joint efforts by participants in the supply chain ecosystem."
+                        </p>
+                    </h1>
+                    <p className="text-sm font-extralight text-gray-500">Jochen Thewes / Chief Executive Officer</p>
+            </div>
+            {/* end of section */}
 
+            <div className="flex overflow-x-auto gap-4 snap-x snap-mandatory pb-20 ">
+                <div className="container mx-auto p-4">
+                    {/* Card Container */}
+                    <div className="space-y-20 flex-shrink-0">
+                        {/* Individual Card */}
+                        {insightsIndexData.map((item) => (
+                            <div  key={item.id} className={`flex flex-col lg:flex-row items-center lg:gap-28 ${
+                                item.id === 2 ? "lg:flex-row-reverse" : ""
+                            }`}>
+                                {/* Image Section */}
+                                <div
+                                    className={`relative w-full lg:w-1/2 h-64 rounded-lg bg-cover bg-center flex-shrink-0 ${item.bgColor}`}
+                                    style={{
+                                        height: "26rem", // Adjust height as needed
+                                        backgroundImage: `url(${item.image})`, // Ensure the image URL is passed correctly
+                                    }}
+                                >
+                                    {/* Button Overlay */}
+                                    <button
+                                        className="absolute bottom-4 left-4 bg-black/80 text-white text-xs px-4 py-2 font-extrabold rounded-full shadow-lg hover:bg-gray-200"
+                                    >
+                                        {item.button}
+                                    </button>
+                                </div>
+
+                                {/* Description Section */}
+                                <div className="w-full lg:w-1/2 p-6 lg:p-10 flex flex-col justify-center">
+                                    <p className="text-sm font-light text-slate-500 ">{item.subheading}</p>
+                                    
+                                    <h1 className="text-3xl lg:text-3xl font-normal text-black mb-2">
+                                        {item.title}
+                                    </h1>
+                                    <p className="text-base lg:text-xl font-extralight text-black mb-6">
+                                        {item.description}
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
 
             <div className="">
                 <TagCarousel />
