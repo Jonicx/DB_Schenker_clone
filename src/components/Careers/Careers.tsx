@@ -251,7 +251,6 @@ export default function Career() {
                                 <div className="w-44 h-44 rounded-full overflow-hidden">
                                     <img
                                         src={benefit.image}
-                                        alt={benefit.title}
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
