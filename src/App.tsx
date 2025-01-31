@@ -15,22 +15,24 @@ import TrackingShipmentResults from './components/Tracking/TrackingShipmentResul
 import Business from './components/Business/Business';
 import Career from './components/Careers/Careers';
 import Insights from './components/Insights/insights';
+import AuthPage from './components/Authentication/AuthPage'; // Import AuthPage
 
 function App() {
   const location = useLocation();
   const isTrackingPage = location.pathname.startsWith('/tracking');
+  const isAuthPage = location.pathname.startsWith('/authorization/oauth'); // Check if on AuthPage
 
   return (
     <div className="min-h-screen bg-white">
-      {!isTrackingPage && <Header />}
-      <main className="">
+      {!isTrackingPage && !isAuthPage && <Header />} {/* Hide Header on AuthPage */}
+      <main>
         <Routes>
+          <Route path="/authorization/oauth" element={<AuthPage />} /> {/* Auth Route */}
           <Route path="/" element={
             <>
               <div className="mx-auto pb-16">
                 <HeroSection />
               </div>
-              {/* Additional Content - Added margin top to account for overlapping forms */}
               <div className="mx-auto pb-16 mt-20 sm:pt-[35%] pt-[105%] lg:pt-[22%] md:pt-[40%] xl:pt-[9rem]" style={{ marginRight: '0px', marginLeft: '1rem' }}>
                 <ServicesCarousel />
               </div>
@@ -56,7 +58,7 @@ function App() {
           <Route path="/Insights" element={<Insights/>} />
         </Routes>
       </main>
-      {!isTrackingPage && <Footer />}
+      {!isTrackingPage && !isAuthPage && <Footer />} {/* Hide Footer on AuthPage */}
     </div>
   );
 } 

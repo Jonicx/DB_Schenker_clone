@@ -99,6 +99,7 @@ const Header = () => {
                 style={{
                   boxShadow: '3px 4px 10px rgba(0, 0, 0, 0.2)',
                 }}
+                onClick={() => navigate('/authorization/oauth')} // Navigate to the login page
               >
                 <User className="w-6 h-5" strokeWidth="1.3" />
                 <span className="font-bold hidden lg:inline">Login</span>
@@ -168,6 +169,7 @@ const Header = () => {
             
             <button
               className="bg-[#005F6A] hidden text-white px-4 py-3 rounded-full hover:bg-[#004D55] xl:flex items-center space-x-1"
+              onClick={() => navigate('/authorization/oauth')} // Navigate to the login page
             >
               <User className="w-6 h-5" strokeWidth="1.3" />
               <span className="font-bold xl:flex hidden">Login</span>

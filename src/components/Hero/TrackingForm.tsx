@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AlertCircle } from 'lucide-react';
 import { shipments } from '../../data/shipments';
-
 
 const TrackingForm = () => {
   const [error, setError] = useState('');
@@ -15,7 +14,8 @@ const TrackingForm = () => {
       setError('');
       
       if (!referenceNumber.trim()) {
-          setError('Please enter a reference number');
+          // If input is empty, navigate to the search page
+          navigate('/tracking/search');
           return;
       }
 
@@ -29,7 +29,7 @@ const TrackingForm = () => {
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
-      handleSubmit();
+      handleSubmit(e); // Ensure handleSubmit is passed the event when using Enter key
     }
   };
   

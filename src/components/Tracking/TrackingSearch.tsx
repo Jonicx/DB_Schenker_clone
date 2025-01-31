@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { X, Menu, BadgeHelp, Globe } from 'lucide-react';
 import { shipments } from '../../data/shipments';
 import dbSchenkerSearchBg from "../../Assets/DbSchenkerSearchBg.jpg"
+import dbLogo from "../../Assets/DB-Schenker-logo.svg"
 
 const TrackingSearch = () => {
     const navigate = useNavigate();
@@ -41,7 +42,14 @@ const TrackingSearch = () => {
       <div className="flex flex-col h-screen gap-0">
         {/* Header */}
         <header className="flex z-10 justify-between items-center lg:px-8 p-4 bg-white border-gray-200" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
-          <h2 className="text-xl font-bold">SCHENKER</h2>
+            <div className="flex items-center space-x-12 course-pointer">
+                <img
+                src={dbLogo}
+                alt="DB Schenker Logo"
+                className="w-32 lg:w-40 md:w-40 sm:w-40  h-auto course-pointer"
+                onClick={() => navigate('/')} // Navigate to the homepage on click
+                />
+            </div>
           
           <nav className="hidden md:flex gap-3">
             <button className="hover:text-[#005f6a] hover:underline flex items-center space-x-2">
@@ -51,8 +59,8 @@ const TrackingSearch = () => {
                 <BadgeHelp className="w-5 h-5" strokeWidth="1.3"/>
                 <a href="#" className="text-base font-medium text-black hover:text-[#005f6a]">Help</a>
             </div>
-            <a href="#" className="text-base font-medium text-black hover:text-[#005f6a]">Register</a>
-            <a href="#" className="text-base font-medium text-black hover:text-[#005f6a]">Login</a>
+            <a onClick={() => navigate('/authorization/oauth')} className="text-base font-medium text-black hover:text-[#005f6a]">Register</a>
+            <a onClick={() => navigate('/authorization/oauth')} className="text-base font-medium text-black hover:text-[#005f6a]">Login</a>
           </nav>
           <button
             className="md:hidden text-black hover:text-black"
@@ -69,8 +77,8 @@ const TrackingSearch = () => {
                     <X size={30} strokeWidth={0.5} />
                 </button>
                 <div className='space-y-3 '>
-                    <a href="#" className="block text-base font-medium text-black hover:text-[#005f6a]">Register</a>
-                    <a href="#" className="block text-base font-medium text-black hover:text-[#005f6a]">Login</a>
+                    <a onClick={() => navigate('/authorization/oauth')} className="block text-base font-medium text-black hover:text-[#005f6a]">Register</a>
+                    <a onClick={() => navigate('/authorization/oauth')} className="block text-base font-medium text-black hover:text-[#005f6a]">Login</a>
                 </div>
                 <div className="mt-auto border-t pt-4">
                     <a href="#" className="block mb-2 text-base font-medium text-black hover:underline">GTC</a>
@@ -89,7 +97,7 @@ const TrackingSearch = () => {
                     className="h-full bg-cover bg-center" 
                     style={{ backgroundImage: `url(${dbSchenkerSearchBg})` }}
                 ></div>
-            </div>
+            </div> 
 
             {/* Right Panel */}
             <div className="flex-1 flex flex-col justify-start mt-12 p-6 bg-white">
@@ -164,7 +172,7 @@ const TrackingSearch = () => {
                 </button>
             </div>
         </div>
-        <footer className="flex text-base font-medium items-center w-full border-t text-black px-5 lg:px-20 py-3">
+        <footer className="flex text-sm font-medium items-center w-full border-t text-black/50 px-5 lg:px-20 py-3">
             <div className="hidden md:flex w-full justify-between items-center">
                 <div className="flex gap-2">
                     <a href="#" className="hover:underline">GTC</a>
@@ -175,9 +183,9 @@ const TrackingSearch = () => {
                     <span>|</span>
                     <a href="#" className="hover:underline">Support</a>
                 </div>
-                <span className="text-sm text-black">United States of America - English (US)</span>
+                <span className="text-sm text-black/50">United States of America - English (US)</span>
             </div>
-            <div className="flex flex-col md:hidden gap-2 mt-4 mb-3 text-sm text-black">
+            <div className="flex flex-col md:hidden gap-2 mt-4 mb-3 text-sm text-black/50">
                 <a href="#" className="hover:underline">GTC</a>
                 <a href="#" className="hover:underline">Legal</a>
                 <a href="#" className="hover:underline">Privacy</a>
