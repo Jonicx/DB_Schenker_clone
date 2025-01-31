@@ -36,7 +36,7 @@ function App() {
               <div className="mx-auto pb-16 mt-20 sm:pt-[35%] pt-[105%] lg:pt-[22%] md:pt-[40%] xl:pt-[9rem]" style={{ marginRight: '0px', marginLeft: '1rem' }}>
                 <ServicesCarousel />
               </div>
-              <div className="mx-auto pb-16" style={{ margin: '0rem', marginRight: '0rem', marginLeft: '0rem', maxWidth: '100%' }}>
+              <div className="mx-auto pb-16">
                 <ArticleCarousel />
               </div>
               <div className="max-w-7xl mx-auto pb-16">

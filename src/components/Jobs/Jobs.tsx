@@ -5,7 +5,7 @@ export default function Jobs() {
   return (
     <div className="container max-w-full" style={{ justifyItems: "center" }}>
       <div className="pt-3">
-        <h1 className="text-4xl mb-6 text-center">Find your perfect Position</h1>
+        <h1 className="lg:text-3xl text-2xl lg:mb-24 mb-10 text-center">Find your perfect Position</h1>
       </div>
       <JobCard />
     </div>

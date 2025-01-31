@@ -31,12 +31,12 @@ export default function HeroSection() {
         {/* Forms Section */}
         <div className="absolute inset-x-0 top-[115%] xs:top-[120%] xl:top-[95%] lg:top-[105%] md:top-[105%] sm:top-[110%] transform translate-y-[-27%] z-10 lg:-translate-y-[48%] px-0">
           <div className="px-10">
-            <h1 className="text-white font-normal text-[clamp(1rem,5vw,3rem)]">
+            <h1 className="text-white font-normal lg:text-5xl text-3xl">
               Accelerating Logistics
             </h1>
             <div className="w-8 h-1 bg-red-600 mt-4 rounded-full"></div>
           </div>
-          <div className="mx-auto px-4 max-w-screen-2xl">
+          <div className="mx-auto lg:px-4 max-w-screen-2xl">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 bg-none rounded-lg p-6">
               <div className="col-span-12 lg:col-span-2 order-2 lg:order-1">
                 <LoginSection />

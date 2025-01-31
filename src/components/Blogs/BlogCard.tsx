@@ -33,9 +33,9 @@ export default function BlogCard({ blog }: BlogCardProps) {
 
                     {/* Description */}
                     <div className="w-full lg:w-1/2 lg:p-7 flex flex-col">
-                        <p className="text-sm font-light text-slate-500 lg:mb-7">{blog.subheading}</p>
-                        <h2 className="text-3xl font-normal lg:mb-7">{blog.title}</h2>
-                        <p className="text-xl font-light lg:mb-10">{blog.description}</p>
+                        <p className="text-sm font-light text-slate-500 lg:mb-2">{blog.subheading}</p>
+                        <h2 className="text-3xl lg:text-3xl font-normal text-black lg:mb-3">{blog.title}</h2>
+                        <p className="text-base lg:text-xl font-extralight text-black lg:mb-2">{blog.description}</p>
                         <a
                             href="#"
                             className="items-center text-[#005F6A] hover:text-teal-800 font-extrabold transition-colors duration-200"

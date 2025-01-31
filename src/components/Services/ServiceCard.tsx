@@ -21,7 +21,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
         </div>
         <div className="py-4 mt-5 flex flex-col justify-between">
-          <h3 className="text-xl lg:text-3xl font-normal text-black">{service.title}</h3>
+          <h3 className="text-2xl lg:text-3xl font-normal text-black">{service.title}</h3>
           <a
             href={service.link}
             className="mt-4 gap2 text-[#005F6A] hover:text-teal-800 font-extrabold transition-colors duration-200"

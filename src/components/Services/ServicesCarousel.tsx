@@ -35,11 +35,11 @@ export default function ServicesCarousel() {
       return () => element.removeEventListener('scroll', handleScroll);
     }
   }, []);
-
+ 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-[45vh] lg:mt-10 -sm:mt-[33vh] -md:mt-[30vh] max-w-fit">
       <div className="pt-3">
-        <h1 className="text-[clamp(1rem,5vw,3rem)] mb-3">Your new favorite track</h1>
+        <h1 className="lg:text-5xl text-3xl mb-10">Your new favorite track</h1>
       </div>
 
       <div className="relative lg:ml-48 ml-12 ">
@@ -58,14 +58,14 @@ export default function ServicesCarousel() {
         </div>
         <div
           ref={scrollRef}
-          className="flex overflow-x-auto gap-1 snap-x snap-mandatory pb-6 scrollbar-hide"
+          className="flex overflow-x-auto gap-2 snap-x snap-mandatory pb-6 scrollbar-hide"
         >
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} />
           ))}
         </div>
         <div className="mt-4 flex justify-center items-center h-1">
-          <div className="w-1/5 h-1 bg-gray-200 rounded-full overflow-hidden">
+          <div className="lg:w-1/5 w-2/3 h-1 bg-gray-200 rounded-full overflow-hidden">
             <div
               className="h-full bg-[#005F6A] transition-all duration-300"
               style={{ width: `${scrollProgress}%` }}

@@ -29,7 +29,7 @@ export default function JobCard() {
       {/* Horizontal Slider with Custom Scrollbar */}
       <div
         ref={scrollRef}
-        className="flex gap-5 snap-x snap-mandatory pb-6 scrollbar-hide"
+        className="flex gap-6 snap-x snap-mandatory pb-6 scrollbar-hide"
         style={{
           padding: "2rem", // Add padding to left and right of the container
           overflowX: "auto", // Allow horizontal scrolling
@@ -41,10 +41,10 @@ export default function JobCard() {
         {jobs.map((job) => (
           <div
             key={job.id}
-            className="flex-shrink-0 snap-start rounded-md bg-white "
+            className="flex-shrink-0 w-96 snap-start rounded-md bg-white shadow-custom-dark"
             style={{
-              boxShadow: "4px 4px 15px rgba(0, 0, 0, 0.1)",
-              width: "27rem", // Fixed width for each job card
+              // boxShadow: "4px 4px 15px rgba(0, 0, 0, 0.1)",
+               // Fixed width for each job card
               height: "22rem", // Fixed height for each job card
             }}
           >
@@ -98,7 +98,7 @@ export default function JobCard() {
 
       {/* Scroll Progress Bar */}
       <div className="flex justify-center items-center h-1">
-        <div className="w-1/5 h-1 bg-gray-200 rounded-full overflow-hidden">
+        <div className="lg:w-1/5 w-2/3 h-1 bg-gray-200 rounded-full overflow-hidden">
           <div
             className="h-full bg-[#005F6A] transition-all duration-300"
             style={{ width: `${scrollProgress}%` }}

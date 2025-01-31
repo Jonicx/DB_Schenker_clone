@@ -31,7 +31,7 @@ export default function Career() {
                 {/* Text Overlay */}
                 <div className="relative top-48 z-10 flex flex-col items-start justify-center h-full text-center px-0">
                     <div className="px-10">
-                        <h1 className="text-white font-normal text-5xl">
+                        <h1 className="text-white font-normal lg:text-5xl text-3xl">
                             Careers
                         </h1>
                         <div className="w-8 h-1 bg-red-600 mt-2 rounded-full"></div>
@@ -214,7 +214,7 @@ export default function Career() {
 
                                 {/* Description Section */}
                                 <div className="w-full lg:w-1/2 p-6 lg:p-10 flex flex-col justify-center">
-                                    <p className="text-sm font-light text-slate-500 ">{item.subheading}</p>
+                                    <p className="text-sm font-light text-slate-500 ">{item.subheading}</p> 
                                     
                                     <h1 className="text-3xl lg:text-3xl font-normal text-black mb-2">
                                         {item.title}

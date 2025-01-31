@@ -4,9 +4,9 @@ import BlogCard from "./BlogCard";
 
 export default function BlogCarousel() {
     return (
-        <div className="container mx-auto" style={{ justifyItems: 'center'}}>
+        <div className="container mx-auto justify-center">
             <div className="pt3">
-                <h1 className="text-4xl mb-24" style={{textAlign:"center"}}>
+                <h1 className="lg:text-3xl text-2xl lg:mb-24 mb-10 text-center">
                     What moves us
                 </h1>
             </div>

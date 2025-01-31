@@ -14,7 +14,7 @@ export interface Articles {
   export const articles: Articles[] = [
     {
       id: '1',
-      title: 'Powering the Future or e-Mobility',
+      title: 'DB SCHENKER is Elevating Logistics and Empowering Businesses',
       image: DbSchenkerPowering,
       buttons: [
         { text: 'Blog', url: '#' },
@@ -36,7 +36,7 @@ export interface Articles {
     },
     {
       id: '3',
-      title: 'DB Schenker to launch new warehouse for semiconductors in the Netherlands',
+      title: 'Powering the Future of e-Mobility',
       image: dbSchenkerSemiConductor,
       buttons: [
         { text: 'PR', url: '#' },
@@ -50,7 +50,7 @@ export interface Articles {
     {
       id: '4',
       title: 'DB Schenker to launch new warehouse for semiconductors in the Netherlands',
-      image: '',
+      image: 'Powering the Future of e-Mobility',
       buttons: [
         { text: 'PR', url: '#' },
         { text: 'News', url: '#' },

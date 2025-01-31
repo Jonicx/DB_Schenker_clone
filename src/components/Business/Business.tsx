@@ -27,7 +27,7 @@ export default function Business() {
                 {/* Text Overlay */}
                 <div className="relative top-48 z-10 flex flex-col items-start justify-center h-full text-center px-0">
                     <div className="px-10">
-                        <h1 className="text-white font-normal text-5xl">
+                        <h1 className="text-white font-normal lg:text-5xl text-3xl">
                             Buisness
                         </h1>
                         <div className="w-8 h-1 bg-red-600 mt-2 rounded-full"></div>

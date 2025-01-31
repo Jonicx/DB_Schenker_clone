@@ -29,9 +29,9 @@ export default function ArticleCarousel() {
   }, []);
 
   return (
-    <div className="container mx-auto" style={{ maxWidth: "fit-content", justifyItems: "center" }}>
+    <div className="container mx-auto max-w-fit justify-center">
       <div className="pt-1">
-        <h1 className="text-4xl" style={{ marginBottom: "6rem", textAlign: "center" }}>
+        <h1 className="lg:text-3xl text-2xl lg:mb-24 mb-10 text-center">
           Trending articles for you
         </h1>
       </div>
@@ -47,7 +47,7 @@ export default function ArticleCarousel() {
         ))}
       </div>
       <div className="mt-4 flex justify-center items-center h-1">
-        <div className="w-1/5 h-1 bg-gray-200 rounded-full overflow-hidden">
+        <div className="lg:w-1/5 w-2/3 h-1 bg-gray-200 rounded-full overflow-hidden">
           <div
             className="h-full bg-[#005F6A] transition-all duration-300"
             style={{ width: `${scrollProgress}%` }}

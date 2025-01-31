@@ -37,16 +37,16 @@ export default function ArticleCard({ article }: ArticleCarouselProps) {
 
         {/* Title and Link */}
         <div className="max-w-[450px] p-1 mt-5 min-h-[100px] flex flex-col justify-between">
-          <h3 className="bottom-4 left-4 text-xl text-black font-medium">{article.title}</h3>
+          <h3 className="bottom-4 left-4 text-xl text-black font-light">{article.title}</h3>
         </div>
-        <div className="max-w-[450px] p-1 mt-2 flex flex-col">
+        {/* <div className="max-w-[450px] p-1 mt-2 flex flex-col">
           <a
             href="#"
             className=" items-center text-teal-800 hover:text-teal-800 font-extrabold transition-colors duration-200"
           >
             Read more
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
