@@ -33,7 +33,7 @@ export default function TagCarousel() {
   return (
     <div className="min-h-screen bg-gray-100 p-10 pb-24">
       <div className="max-w-[90rem] mx-auto flex flex-col justify-center items-center">
-        <h1 className="text-4xl text-center mb-2 pt-20">
+        <h1 className="text-2xl lg:text-3xl font-normal text-center mb-2 pt-10">
           Personally recommended to you
         </h1>
         

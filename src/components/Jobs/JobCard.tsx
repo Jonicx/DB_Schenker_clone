@@ -29,60 +29,46 @@ export default function JobCard() {
       {/* Horizontal Slider with Custom Scrollbar */}
       <div
         ref={scrollRef}
-        className="flex gap-6 snap-x snap-mandatory pb-6 scrollbar-hide"
-        style={{
-          padding: "2rem", // Add padding to left and right of the container
-          overflowX: "auto", // Allow horizontal scrolling
-          width: "98vw", // Full viewport width
-          maxWidth: "100%", // Prevent container overflow
-          boxSizing: "border-box", // Ensure padding is included in width calculation
-        }}
+        className="flex gap-7 snap-x snap-mandatory p-7 overflow-auto w-[98vw] box-border max-w-full  scrollbar-hide"
       >
         {jobs.map((job) => (
           <div
             key={job.id}
-            className="flex-shrink-0 w-96 snap-start rounded-md bg-white shadow-custom-dark"
-            style={{
-              // boxShadow: "4px 4px 15px rgba(0, 0, 0, 0.1)",
-               // Fixed width for each job card
-              height: "22rem", // Fixed height for each job card
-            }}
+            className="flex-shrink-0 w-[25rem] h-[20rem]  snap-start rounded-md bg-white shadow-custom-dark"
           >
-            <div className="relative bg-white p-8 rounded-lg h-full">
+            <div className="flex flex-col bg-white gap-4 pl-5 rounded-lg h-full">
               {/* Job State */}
-              <div className="text-sm text-gray-500 font-light mb-2">{job.state}</div>
 
-              {/* Job Title */}
-              <h3 className="text-3xl font-normal mb-2">{job.title}</h3>
+              <div className=" flex flex-col pt-5 gap-2">
+                <p className="text-sm font-light ml-2 text-slate-400 ">{job.state}</p>
+                
+                {/* Job Title */}
+                <h3 className="text-3xl ml-2 font-normal text-black ">{job.title}</h3>
+              </div>
 
               {/* Job Description */}
-              <p
-                className="absolute text-gray-700 text-lg"
-                style={{ paddingRight: "6rem", top: "50%", fontWeight: "450" }}
-              >
-                {job.description}
-              </p>
 
-              {/* Job Button */}
-              <button
-                className="absolute bottom-6 left-6 bg-white text-[#005F6A] hover:text-teal-800 rounded-full font-semibold px-5 py-3 transition duration-200"
-                style={{
-                  boxShadow: "3px 4px 10px rgba(0, 0, 0, 0.2)",
-                }}
-              >
-                View Job
-              </button>
+              <div className=" py-7 flex flex-col gap-10 justify-end flex-1">
+                <p
+                  className="text-base font-normal ml-2  text-black"
+                  
+                >
+                  {job.description}
+                </p>
+
+                {/* Job Button */}
+                <button
+                  className=" bg-white w-1/3 ml-2 text-[#005F6A] hover:text-teal-800 shadow-custom-medium rounded-full font-semibold px- py-3">
+                  View Job
+                </button>
+              </div>
+
             </div>
           </div>
         ))}
         {/* "Discover More Jobs" Card */}
         <div
-          className="flex-shrink-0 snap-start"
-          style={{
-            boxShadow: "4px 6px 15px rgba(0, 0, 0, 0.1)",
-            width: "27rem",
-            height: "22rem",
-          }}
+          className="flex-shrink-0 w-[25rem] h-[20rem]  snap-start rounded-md bg-white shadow-custom-dark"
         >
           <div className="relative bg-white p-10 rounded-lg h-full">
             {/* Job Title */}
