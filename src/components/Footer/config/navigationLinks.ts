@@ -1,5 +1,4 @@
 export const serviceLinks = [
-  { text: 'Contact', href: '#' },
   { text: 'Branch Locator', href: '#' },
   { text: 'Login', href: '/DB_Schenker_clone/authorization/oauth' },
 ]; 

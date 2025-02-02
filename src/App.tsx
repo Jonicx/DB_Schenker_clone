@@ -16,6 +16,7 @@ import Business from './components/Business/Business';
 import Career from './components/Careers/Careers';
 import Insights from './components/Insights/insights';
 import AuthPage from './components/Authentication/AuthPage'; // Import AuthPage
+import './index.css';
 
 function App() {
   const location = useLocation();
@@ -23,29 +24,29 @@ function App() {
   const isAuthPage = location.pathname.startsWith('/authorization/oauth'); // Check if on AuthPage
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen font-dbheadr bg-white">
       {!isTrackingPage && !isAuthPage && <Header />} {/* Hide Header on AuthPage */}
       <main>
         <Routes>
           <Route path="/authorization/oauth" element={<AuthPage />} /> {/* Auth Route */}
           <Route path="/" element={
             <>
-              <div className="mx-auto pb-16">
+              <div className="mx-auto pb-16 font-dbheadr">
                 <HeroSection />
               </div>
-              <div className="mx-auto pb-16 mt-20 sm:pt-[35%] pt-[105%] lg:pt-[22%] md:pt-[40%] xl:pt-[9rem]" style={{ marginRight: '0px', marginLeft: '1rem' }}>
+              <div className="mx-auto pb-16 font-dbheadr mt-20 sm:pt-[35%] pt-[105%] lg:pt-[22%] md:pt-[40%] xl:pt-[9rem]" style={{ marginRight: '0px', marginLeft: '1rem' }}>
                 <ServicesCarousel />
               </div>
-              <div className="mx-auto pb-16">
+              <div className="mx-auto font-dbheadr pb-16">
                 <ArticleCarousel />
               </div>
-              <div className="max-w-7xl mx-auto pb-16">
+              <div className="max-w-7xl font-dbheadr mx-auto pb-16">
                 <BlogCarousel />
               </div>
-              <div className="mx-auto pb-16">
+              <div className="mx-auto font-dbheadr pb-16">
                 <Jobs />
               </div>
-              <div className="mx-auto">
+              <div className="mx-auto font-dbheadr">
                 <TagCarousel />
               </div>
             </>

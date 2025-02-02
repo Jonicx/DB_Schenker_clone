@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'DBHeadr';
+  src: url('/src/Assets/fonts/DB\ Head\ Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply the font globally */
+body {
+  @apply font-dbheadr;
+}
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
@@ -10,3 +22,5 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+

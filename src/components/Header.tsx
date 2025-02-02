@@ -84,7 +84,7 @@ const Header = () => {
             </nav>
 
             {/* Mobile Layout for Medium and Small Screens */}
-            <div className="flex xl:hidden items-center justify-between">
+            <div className="flex xl:hidden items-center justify-between gap-2">
               {/* Search Button on the Left */}
               <button className="p-2 hover:bg-gray-100 rounded-full">
                 <Search className="w-5 h-5" />
@@ -133,17 +133,34 @@ const Header = () => {
               <nav className="flex flex-col justify-between h-[98%] cursor-pointer" style={{ padding: '5rem 5rem 0rem 5rem' }}>
                 <ul className="flex flex-col space-y-4 p-4 ">
                   <li>
-                    <a onClick={() => navigate('/business')} className="font-extrabold text-lg">
+                    <a  
+                      onClick={() => { 
+                        navigate('/business'); 
+                        setIsMenuOpen(false); // Close the menu after navigating
+                      }}  
+                      className="font-extrabold text-lg"
+                    >
                       Business
                     </a>
                   </li>
                   <li>
-                    <a onClick={() => navigate('/careers')} className="font-extrabold text-lg">
+                    <a 
+                      onClick={() => {
+                        navigate('/careers');
+                        setIsMenuOpen(false); // Close the menu after navigating
+                      }} 
+                      className="font-extrabold text-lg"
+                    >
                       Careers
                     </a>
                   </li>
                   <li>
-                    <a onClick={() => navigate("/insights")} className="font-extrabold text-lg">
+                    <a 
+                      onClick={() => {
+                        navigate("/insights");
+                        setIsMenuOpen(false); // Close the menu after navigating
+                      }} className="font-extrabold text-lg"
+                    >
                       Insights
                     </a>
                   </li>

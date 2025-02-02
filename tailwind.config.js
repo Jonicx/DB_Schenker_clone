@@ -12,8 +12,9 @@ export default {
         'custom-medium': '0 4px 10px rgba(0, 0, 0, 0.15)',
         'custom-dark': '0 6px 15px rgba(0, 0, 0, 0.2)',
       },
-    },
-    theme: {
+      fontFamily: {
+        dbheadr: ['DBHeadr', 'sans-serif'], // ✅ Added custom font
+      },
       screens: {
         xsm: '480px',
         sm: '640px',
@@ -22,7 +23,7 @@ export default {
         xl: '1280px',
         '2xl': '1536px',
       },
-    },    
+    },
   },
   plugins: [],
   safelist: [
