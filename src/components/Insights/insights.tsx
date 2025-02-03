@@ -13,7 +13,7 @@ export default function Insights() {
             <div className="relative w-full h-[70vh] overflow-hidden pb-20">
                 <img
                     src={background} // Use the imported background variable here
-                    alt="Hero background"
+                    alt="Hero background" 
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 {/* Dimmed Overlay */}
@@ -21,7 +21,7 @@ export default function Insights() {
                 {/* Text Overlay */}
                 <div className="relative top-48 lg:top-20 z-10 flex flex-col items-start justify-center h-full px-0">
                     <div className="px-10">
-                        <h1 className="text-white font-normal text-5xl xl:text-9xl">
+                        <h1 className="text-white font-normal lg:text-5xl text-3xl xl:text-9xl">
                             Get to know us.
                         </h1>
                         <div className="w-8 h-1 bg-red-600  mt-2 rounded-full"></div>

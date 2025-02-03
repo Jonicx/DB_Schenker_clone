@@ -38,10 +38,13 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
+    // <header
+    //   className={`${
+    //     isNavVisible ? 'top-0' : '-top-32'
+    //   } fixed left-0 w-full bg-white z-50 shadow-sm transition-all ease-in-out duration-300`}
+    // >
     <header
-      className={`${
-        isNavVisible ? 'top-0' : '-top-32'
-      } fixed left-0 w-full bg-white z-50 shadow-sm transition-all ease-in-out duration-300`}
+      className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm transition-all ease-in-out duration-300"
     >
       <div
         className="w-full px-4 sm:px-6 lg:px-12 xl:px-20 2xl:px-32 mx-auto"
